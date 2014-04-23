@@ -1,4 +1,4 @@
 GdGFlickr
 =========
 
-Flickr API adapter
+Flickr API adapter library
