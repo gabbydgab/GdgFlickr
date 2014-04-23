@@ -1,0 +1,4 @@
+GdGFlickr
+=========
+
+Flickr API adapter
