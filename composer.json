@@ -1,0 +1,32 @@
+{
+    "name": "gabbydgab/gdg-flickr",
+    "description": "Sample Flickr API viewer module in ZF2",
+    "license": "BSD-2-Clause",
+    "keywords": [
+        "Flicker",
+        "flicker",
+        "zf2"
+    ],
+    "homepage": "https://github.com/gabbydgab/GdgFlickr",
+    "authors": [
+        {
+            "name": "Gab Amba",
+            "email": "gamba@gabbydgab.com",
+            "homepage": "http://www.gabbydgab.com/"
+        }
+    ],
+    "require": {
+        "zendframework/zendservice-flickr": "2.0.*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev",
+            "dev-develop": "1.1-dev"
+        }
+    },
+    "autoload": {
+        "psr-0": {
+            "GdgFlickr": "src/"
+        }
+    }
+}
