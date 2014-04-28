@@ -28,17 +28,24 @@
  */
 
 return [
+    
+    'controllers' => [
+        'invokables' => [
+            'GdgFlickr\Controller\Index' => 'GdgFlickr\Controller\IndexController'
+        ],
+    ],
+    
     /**
      * HTTP based routing
      */
     'router' => [
         'routes' => [
-            'api' => [
+            'demo' => [
                 'type' => 'Literal',
                 'options' => [
-                    'route' => '/api-demo',
+                    'route' => '/api-demo/Flickr',
                     'defaults' => [
-                        '__NAMESPACE__' => "GdgApi\Controller",
+                        '__NAMESPACE__' => "GdgFlickr\Controller",
                         'controller' => "Index",
                         'action' => 'index'
                     ],
@@ -48,20 +55,16 @@ return [
                     'default' => [
                         'type'    => 'Segment',
                         'options' => [
-                            'route'    => '/Flickr/[:controller[/:action]]',
+                            'route'    => '/[:controller[/:action]]',
                             'constraints' => [
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ],
-                            'defaults' => [
-                                '__NAMESPACE__' => "GdgFlickr\Controller",
-                                'controller' => "Index",
-                                'action' => 'index'
-                            ],
+                            'defaults' => [],
                         ],
                     ],
                 ],
-            ]
+            ],
         ]
     ],
     
@@ -75,5 +78,11 @@ return [
             ]
         ]
     ],
+    
+    'view_manager' => [
+        'template_path_stack' => [
+            'gdg-flickr' => __DIR__ . '/../view',
+        ]
+    ]
 ];
 
